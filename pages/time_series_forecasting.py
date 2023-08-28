@@ -201,8 +201,6 @@ def make_model(n, data, x_data, y_data):
 
             dcc.Dropdown(
                 id='tsf-model_drop_down',
-                persistence=True,
-                persistence_type='memory',
                 options=[
                     {'label': 'LSTM', 'value': 'LSTM'},
                     {'label': 'BiLSTM', 'value': 'BiLSTM'},

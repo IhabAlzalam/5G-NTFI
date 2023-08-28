@@ -92,8 +92,6 @@ layout = html.Div([
 
     dcc.Dropdown(
         id='model_drop_down',
-        persistence=True,
-        persistence_type='memory',
         options=[
             {'label': 'LSTM', 'value': 'LSTM'},
             {'label': 'BiLSTM', 'value': 'BiLSTM'},
