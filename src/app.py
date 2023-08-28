@@ -16,7 +16,7 @@ server = app.server
 
 
 app.layout = html.Div([
-    html.Img(src=('../assets/DFKI.jpg'), alt='Logo', style={"float": "right",
+    html.Img(src=app.get_asset_url('DFKI.jpg'), alt='Logo', style={"float": "right",
                                                                    "marginTop": 0}),
 
     dcc.Location(id='url', refresh=False),
