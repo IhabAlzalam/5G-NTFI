@@ -4,6 +4,7 @@ import io
 
 import pathlib
 
+import tensorflow as tf
 
 from keras.layers import *
 from keras.callbacks import History
