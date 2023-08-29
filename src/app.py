@@ -1,22 +1,24 @@
 import dash
 from dash import html, dcc
 
-import pathlib
+from PIL import Image
+
 from dash.dependencies import Input, Output
 
 # Connect to your app pages
 from pages import fg_use_case, time_series_forecasting, train_model, home_page
 
-PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../datasets").resolve()
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
+
+pil_image = Image.open("../assets/DFKI.jpg")
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
 server = app.server
 
 
 app.layout = html.Div([
-    html.Img(src=app.get_asset_url('DFKI.jpg'), alt='Logo', style={"float": "right",
+    html.Img(src=pil_image, alt='Logo', style={"float": "right",
                                                                    "marginTop": 0}),
 
     dcc.Location(id='url', refresh=False),

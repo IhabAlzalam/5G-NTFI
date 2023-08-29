@@ -35,7 +35,8 @@ model1 = load_model(DATA_PATH.joinpath("../lstm_model.h5"))
 model2 = load_model(DATA_PATH.joinpath("../Bilstm_model.h5"))
 model3 = load_model(DATA_PATH.joinpath("../SRNN_model.h5"))
 dataframe = pd.read_csv(DATA_PATH.joinpath('Normal_Case_table.csv'))
-dataframe = dataframe[:200]
+dataframe = dataframe[:900]
+
 
 x = dataframe.value
 x = x.astype('float32')
