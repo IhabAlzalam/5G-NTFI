@@ -19,7 +19,7 @@ server = app.server
 
 app.layout = html.Div([
     html.Img(src=pil_image, alt='Logo', style={"float": "right",
-                                                                   "marginTop": 0}),
+                                               "marginTop": 0}),
 
     dcc.Location(id='url', refresh=False),
     html.Div([

@@ -10,8 +10,9 @@ layout = html.Div([
     html.H4('Description:'),
     html.P('This a Demonstrator for the Reproducibility of ML framework.'
            ' Pre-trained Forecasting Models are deployed for instant usage.'
-           ' The models forecast the traffic for the next 40 Seconds.'),
-    html.P('The pre-trained models are LSTM, BiLSTM and RNN.'), html.B(' They consist of:', style={"color": "green"}),
+           ' The models forecast the traffic for the next 40 seconds.'),
+    html.P('The pre-trained models are LSTM, BiLSTM and RNN.'),
+    html.B(' The models consist of 3 Layers that are built as follows:', style={"color": "green"}),
     html.Ul(html.Li('Input Layer with 100 Neurons.')),
     html.Ul(html.Li('Hidden Layer with 100 Neurons.')),
     html.Ul(html.Li('Dense Layer with 1 Neuron for the output.')),
@@ -30,7 +31,7 @@ layout = html.Div([
     html.P(' You can upload your own time-series data, '
            'choose X-axis and Y-axis, '
            'plot the data, '
-           'and get the different forecasts for the next 40 Seconds'),
+           'and get the different forecasts for the next 40 seconds base don the pre-trained models.'),
     html.Li(html.B('Train Model')),
     html.P('Can be used to get an overview about the data and the forecasting models'
            ' with the ability to change some training parameters like window size, number of Neurons,'
@@ -39,7 +40,7 @@ layout = html.Div([
     html.P('You can upload your own time-series data, '
            'choose X-axis and Y-axis, '
            'plot the data, '
-           'choose a model from the list to train '
+           'choose a model from the list to train, '
            'set the training parameters, '
            'plot the forecasting for the next 40 Seconds after training, '
            'and download the trained model.'),
