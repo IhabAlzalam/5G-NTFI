@@ -240,11 +240,13 @@ def update_figure(models_list, data):
             xaxis={'tickangle': -45,
                    'nticks': 20,
                    'tickfont': dict(size=14, color="#7f7f7f"),
-                   'title': 'Time / Sec'
+                   'title': '<b>Time (Sec)</b>',
+                   'titlefont': dict(size=28)
 
                    },
             yaxis={'type': "linear",
-                   'title': 'Predicted Values / bps'
+                   'title': '<b>Predicted Values / bps</b>',
+                   'titlefont': dict(size=28)
                    },
             title='Prediction Values'
         )

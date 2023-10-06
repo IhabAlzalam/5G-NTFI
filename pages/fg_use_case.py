@@ -35,7 +35,7 @@ model1 = load_model(DATA_PATH.joinpath("../lstm_model.h5"))
 model2 = load_model(DATA_PATH.joinpath("../Bilstm_model.h5"))
 model3 = load_model(DATA_PATH.joinpath("../SRNN_model.h5"))
 dataframe = pd.read_csv(DATA_PATH.joinpath('Normal_Case_table.csv'))
-dataframe = dataframe[:900]
+dataframe = dataframe[:11888]
 
 
 x = dataframe.value
@@ -128,12 +128,14 @@ def update_figure(model_list):
             xaxis={'tickangle': -45,
                    'nticks': 20,
                    'tickfont': dict(size=14, color="#7f7f7f"),
-                   'title': 'Time / Sec'
+                   'title': '<b>Time (Sec)</b>',
+                   'titlefont': dict(size=28)
 
                    },
             yaxis={'type': "linear",
-                   'title': 'Predicted Values / bps'
+                   'title': '<b>Predicted Values / bps</b>',
+                   'titlefont': dict(size=28)
                    },
-            title='Predicted Values'
+            title='<b>Predicted Values</b>'
         )
     }
