@@ -36,7 +36,7 @@ model3 = load_model(DATA_PATH.joinpath("../SRNN_model.h5"))
 
 
 layout = html.Div([
-    html.H2('Time-Series Forecasting Application', style={'textAlign': 'center'}),
+    html.H2('5G Time-Series Forecasting Application', style={'textAlign': 'center'}),
     html.H4('Upload your Data to be forecasted with the Models', style={'textAlign': 'center'}),
     dcc.Upload(
         id='tsf-upload-data',

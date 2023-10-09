@@ -23,10 +23,10 @@ app.layout = html.Div([
 
     dcc.Location(id='url', refresh=False),
     html.Div([
-        dcc.Link(' Home | ', href='/pages/home_page'),
-        dcc.Link(' 5G Use Case | ', href='/pages/fg_use_case'),
-        dcc.Link(' Time Series Forecasting |', href='/pages/time_series_forecasting'),
-        dcc.Link(' Train Model ', href='/pages/train_model'),
+        dcc.Link('   Home  ', href='/pages/home_page', style={'padding-left': '40px'}),
+        dcc.Link('   5G Forecast Use Case (Reproducibility)   ', href='/pages/fg_use_case', style={'padding-left': '30px'}),
+        dcc.Link('   5G Time-Series Forecasting (Replicability)   ', href='/pages/time_series_forecasting', style={'padding-left': '30px'}),
+        dcc.Link('   Train Model  ', href='/pages/train_model', style={'padding-left': '30px'}),
     ], className="row"),
     html.Div(id='page-content', children=[])
 ])

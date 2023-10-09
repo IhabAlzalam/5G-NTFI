@@ -85,7 +85,7 @@ fig2.update_layout(width=1800,
 
 
 layout = html.Div([
-    html.H2('5G Use Case Example', style={'textAlign': 'center'}),
+    html.H2('5G Forecast Example', style={'textAlign': 'center'}),
     html.Hr(),
     dcc.Graph(figure=fig2),
 

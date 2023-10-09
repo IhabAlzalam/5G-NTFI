@@ -4,11 +4,11 @@ from dash.dependencies import Input, Output
 
 layout = html.Div([
 
-    html.H2('Dashboard Reproducibility', style={'textAlign': 'center'}),
+    html.H2('5G-NTFI : 5G Network Traffic Forecast Interface', style={'textAlign': 'center'}),
 
 
     html.H4('Description:'),
-    html.P('This a Demonstrator for the Reproducibility of ML framework.'
+    html.P('This a Demonstrator for the Reproducibility/Replicability of ML framework.'
            ' Pre-trained Forecasting Models are deployed for instant usage.'
            ' The models forecast the traffic for the next 40 seconds.'),
     html.P('The pre-trained models are LSTM, BiLSTM and RNN.'),
@@ -20,15 +20,15 @@ layout = html.Div([
 
 
     html.H4('Applications:'),
-    html.H6('You can choose an Application from the upper Pages.', style={"color": "blue"}),
+    html.H6('You can choose an Application from the upper Menu.', style={"color": "blue"}),
 
-    html.Li(html.B('5G Use Case')),
+    html.Li(html.B('5G Forecast Use Case (Reproducibility)')),
     html.P('The models were implemented for this use case.'
            ' It shows an example of the different uses of the models and the Dashboards.'
            ' It Shows the forecasted network traffic for the next 40 Seconds based on our 5G time-series data.'),
-    html.Li(html.B('Time-Series Forecasting')),
+    html.Li(html.B('5G Time-Series Forecasting (Replicability)')),
     html.P('Can be used to get an overview of the data and the forecasting models.'),
-    html.P(' You can upload your own time-series data, '
+    html.P(' You can upload your own 5G time-series data, '
            'choose X-axis and Y-axis, '
            'plot the data, '
            'and get the different forecasts for the next 40 seconds base don the pre-trained models.'),
