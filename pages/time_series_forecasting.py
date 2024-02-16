@@ -133,8 +133,12 @@ def make_graphs(n, data, x_data, y_data):
         fig = px.line(data, x=x_data, y=y_data)
         fig.update_layout(width=1800,
                           hovermode="x unified",
-                          xaxis_title='Time / Sec',
-                          yaxis_title='Traffic Value / bps',
+                          xaxis=dict(title='Time / Sec',
+                                     tickfont=dict(size=24),
+                                     titlefont=dict(size=28)),
+                          yaxis=dict(title='Traffic Value / bps',
+                                     tickfont=dict(size=24),
+                                     titlefont=dict(size=28)),
                           title='Uploaded Data')
         return dcc.Graph(figure=fig)
 
@@ -195,7 +199,7 @@ def make_model(n, data, x_data, y_data):
 
         return html.Div([
 
-            html.H4('Select multiple Forecasting Models'),
+            html.H6('Select multiple Forecasting Models'),
 
             dcc.Store(id='tsf-stored-predictions', data=df.to_dict('records')),
 
@@ -239,15 +243,22 @@ def update_figure(models_list, data):
             hovermode="x unified",
             xaxis={'tickangle': -45,
                    'nticks': 20,
-                   'tickfont': dict(size=14, color="#7f7f7f"),
+                   'tickfont': dict(size=20),
                    'title': '<b>Time (Sec)</b>',
                    'titlefont': dict(size=28)
 
                    },
             yaxis={'type': "linear",
+                   'tickfont': dict(size=20),
                    'title': '<b>Predicted Values / bps</b>',
                    'titlefont': dict(size=28)
                    },
-            title='Prediction Values'
+            title='<b>Predicted Values</b>',
+            legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="left",
+                x=0.02,
+                font=dict(size=24))
         )
     }

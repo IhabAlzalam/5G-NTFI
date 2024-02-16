@@ -79,9 +79,15 @@ fig = go.Figure()
 fig2 = px.line(dataframe, x=dataframe.time, y=dataframe.value, labels={"_value": "Traffic Value"})
 fig2.update_layout(width=1800,
                    hovermode="x unified",
-                   xaxis_title='Time / Sec',
-                   yaxis_title='Traffic Value / bps',
-                   title='Input Data')
+                   xaxis=dict(title='Time / Sec',
+                              tickfont=dict(size=24),
+                              titlefont=dict(size=28)),
+                   yaxis=dict(title='Traffic Value / bps',
+                              tickfont=dict(size=24),
+                              titlefont=dict(size=28)),
+                   title='Input Data',
+
+                               )
 
 
 layout = html.Div([
@@ -89,7 +95,7 @@ layout = html.Div([
     html.Hr(),
     dcc.Graph(figure=fig2),
 
-    html.H6('Select multiple Forecasting Models'),
+    html.H4('Select multiple Forecasting Models'),
 
     dcc.Dropdown(
         id='model_drop_down',
@@ -127,15 +133,22 @@ def update_figure(model_list):
             hovermode="x unified",
             xaxis={'tickangle': -45,
                    'nticks': 20,
-                   'tickfont': dict(size=14, color="#7f7f7f"),
+                   'tickfont': dict(size=20),
                    'title': '<b>Time (Sec)</b>',
                    'titlefont': dict(size=28)
 
                    },
             yaxis={'type': "linear",
+                   'tickfont': dict(size=20),
                    'title': '<b>Predicted Values / bps</b>',
                    'titlefont': dict(size=28)
                    },
-            title='<b>Predicted Values</b>'
+            title='<b>Predicted Values</b>',
+            legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="left",
+                x=0.02,
+                font=dict(size=24))
         )
     }
